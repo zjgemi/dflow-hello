@@ -23,3 +23,9 @@ jobs:
 
     - name: Run test suite
       run: pytest tests
+
+    - name: Notify deepmodeling
+      uses: satak/webrequest-action@master
+      with:
+        url: https://deepmodeling.com/dflow/apis/op/notify/github?user=zjgemi&op=dflow-hello
+        method: GET
