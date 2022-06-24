@@ -44,3 +44,10 @@ jobs:
       run: |
         docker buildx build --platform linux/arm64,linux/amd64 -t zjgemi/dflow-hello:v${{ steps.read.outputs.content }} --push .
         docker buildx build --platform linux/arm64,linux/amd64 -t zjgemi/dflow-hello:latest --push .
+
+    - name: Notify deepmodeling
+      uses: satak/webrequest-action@master
+      with:
+        url: https://deepmodeling.com/dflow/apis/op/notify/dockerhub?op=dflow-hello&user=zjgemi&repo=dflow-hello
+        method: GET
+      continue-on-error: true

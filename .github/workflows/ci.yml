@@ -27,5 +27,6 @@ jobs:
     - name: Notify deepmodeling
       uses: satak/webrequest-action@master
       with:
-        url: https://deepmodeling.com/dflow/apis/op/notify/github?user=zjgemi&op=dflow-hello
+        url: https://deepmodeling.com/dflow/apis/op/notify/github?op=dflow-hello&user=zjgemi&repo=dflow-hello
         method: GET
+      continue-on-error: true
