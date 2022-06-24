@@ -15,7 +15,7 @@ if __name__ == "__main__":
     artifact = upload_artifact("foo.txt")
     step = Step(
         name="step", 
-        template=PythonOPTemplate(Hello, image="dflow-hello"),
+        template=PythonOPTemplate(Hello, image="zjgemi/dflow-hello"),
         parameters={"num": 2}, 
         artifacts={"foo": artifact},
     )
