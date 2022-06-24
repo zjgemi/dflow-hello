@@ -19,6 +19,7 @@ jobs:
     - name: Install python dependencies
       run: |
         pip install .
+        pip install pytest
 
     - name: Run test suite
       run: pytest dflow_hello
