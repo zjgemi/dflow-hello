@@ -10,7 +10,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: github.repository == 'zjgemi/dflow-hello' && startsWith(github.ref, 'refs/tags/v')
+    if: github.repository == 'zjgemi/dflow-hello'
 
     steps:
     - name: Checkout repository
