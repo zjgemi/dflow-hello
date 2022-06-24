@@ -2,9 +2,10 @@ name: Publish on Dockerhub
 
 on:
   push:
-    tags:
-      # After vMajor.Minor.Patch _anything_ is allowed (without "/") !
-      - v[0-9]+.[0-9]+.[0-9]+*
+    branches:
+      - master
+    paths:
+      - 'VERSION'
 
 jobs:
   publish:
@@ -33,6 +34,11 @@ jobs:
       uses: juliangruber/read-file-action@v1
       with:
         path: ./VERSION
+
+    - name: git tag and push
+      run: |
+        git tag ${{ steps.read.outputs.content }}
+        git push --tags
 
     - name: Build and push
       run: |
