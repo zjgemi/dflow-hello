@@ -10,8 +10,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
-    "Development Status :: 3 - Alpha",
-    "Framework :: dflow"
+    "Development Status :: 3 - Alpha"
 ]
 keywords = ["dflow", "OP"]
 requires-python = ">=3.6"
