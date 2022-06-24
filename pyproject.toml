@@ -16,6 +16,7 @@ classifiers = [
 keywords = ["dflow", "OP"]
 requires-python = ">=3.6"
 dependencies = [
+    "importlib-metadata",
     "pydflow>=1.0",
 ]
 
